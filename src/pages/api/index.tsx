@@ -4,6 +4,7 @@ interface User {
   email: string;
 }
 
+const users: User[] = [];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
