@@ -1,4 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
+interface User {
+  nome: string;
+  email: string;
+}
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
