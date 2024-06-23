@@ -10,6 +10,8 @@ const Formulario = () => {
       method: "POST",
       body: JSON.stringify({ nome, email }),
     });
+    setNome("");
+    setEmail("");
   };
 
   return (
