@@ -6,9 +6,12 @@ const Formulario = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Formulario enviado");
-    console.log(nome, email);
+    fetch("/api", {
+      method: "POST",
+      body: JSON.stringify({ nome, email }),
+    });
   };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl font-bold mb-9">Formulário</h1>
