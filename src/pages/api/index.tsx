@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
+
 interface User {
   nome: string;
   email: string;
@@ -15,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function GET(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: "GET" });
+  res.status(200).send("GET");
 }
 
 function POST(req: NextApiRequest, res: NextApiResponse) {
