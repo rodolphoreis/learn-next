@@ -19,5 +19,7 @@ function GET(req: NextApiRequest, res: NextApiResponse) {
 }
 
 function POST(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: "POST" });
+  const user = JSON.parse(req.body);
+  users.push(user);
+  res.status(200).send(users);
 }
